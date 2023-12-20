@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: omke
+  name: shrtopg
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: omke
+      app: shrtopg
   template:
     metadata:
       labels:
-        app: omke
+        app: shrtopg
     spec:
       containers:
-      - image: okteto.dev/omke:latest
-        name: omke
+      - image: okteto.dev/shrtopg:latest
+        name: shrtopg
         ports:
         - containerPort: 8080
         env:
